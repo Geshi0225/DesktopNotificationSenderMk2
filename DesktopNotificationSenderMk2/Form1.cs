@@ -6,5 +6,15 @@ namespace DesktopNotificationSenderMk2
         {
             InitializeComponent();
         }
+
+        private void SendListeningButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StartListeningButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

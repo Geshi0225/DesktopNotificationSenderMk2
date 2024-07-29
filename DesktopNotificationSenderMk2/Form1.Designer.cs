@@ -28,42 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            listBox1 = new ListBox();
-            button1 = new Button();
-            button2 = new Button();
+            notificationsListBox = new ListBox();
+            StartListeningButton = new Button();
+            SendListeningButton = new Button();
             label1 = new Label();
             menuStrip1 = new MenuStrip();
-            設定ToolStripMenuItem = new ToolStripMenuItem();
-            終了ToolStripMenuItem = new ToolStripMenuItem();
+            SettingToolStripMenuItem = new ToolStripMenuItem();
+            EndToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
-            // listBox1
+            // notificationsListBox
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(12, 81);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(507, 289);
-            listBox1.TabIndex = 0;
+            notificationsListBox.FormattingEnabled = true;
+            notificationsListBox.ItemHeight = 15;
+            notificationsListBox.Location = new Point(12, 81);
+            notificationsListBox.Name = "notificationsListBox";
+            notificationsListBox.Size = new Size(507, 289);
+            notificationsListBox.TabIndex = 0;
             // 
-            // button1
+            // StartListeningButton
             // 
-            button1.Location = new Point(12, 31);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 1;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            StartListeningButton.Location = new Point(12, 31);
+            StartListeningButton.Name = "StartListeningButton";
+            StartListeningButton.Size = new Size(75, 23);
+            StartListeningButton.TabIndex = 1;
+            StartListeningButton.Text = "通知の受信を開始";
+            StartListeningButton.UseVisualStyleBackColor = true;
+            StartListeningButton.Click += StartListeningButton_Click;
             // 
-            // button2
+            // SendListeningButton
             // 
-            button2.Location = new Point(93, 31);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 2;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            SendListeningButton.Location = new Point(93, 31);
+            SendListeningButton.Name = "SendListeningButton";
+            SendListeningButton.Size = new Size(75, 23);
+            SendListeningButton.TabIndex = 2;
+            SendListeningButton.Text = "通知の送信";
+            SendListeningButton.UseVisualStyleBackColor = true;
+            SendListeningButton.Click += SendListeningButton_Click;
             // 
             // label1
             // 
@@ -76,25 +78,25 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { 設定ToolStripMenuItem, 終了ToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { SettingToolStripMenuItem, EndToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(532, 24);
             menuStrip1.TabIndex = 4;
             menuStrip1.Text = "menuStrip1";
             // 
-            // 設定ToolStripMenuItem
+            // SettingToolStripMenuItem
             // 
-            設定ToolStripMenuItem.Name = "設定ToolStripMenuItem";
-            設定ToolStripMenuItem.Size = new Size(43, 20);
-            設定ToolStripMenuItem.Text = "設定";
+            SettingToolStripMenuItem.Name = "SettingToolStripMenuItem";
+            SettingToolStripMenuItem.Size = new Size(43, 20);
+            SettingToolStripMenuItem.Text = "設定";
             // 
-            // 終了ToolStripMenuItem
+            // EndToolStripMenuItem
             // 
-            終了ToolStripMenuItem.Alignment = ToolStripItemAlignment.Right;
-            終了ToolStripMenuItem.Name = "終了ToolStripMenuItem";
-            終了ToolStripMenuItem.Size = new Size(43, 20);
-            終了ToolStripMenuItem.Text = "終了";
+            EndToolStripMenuItem.Alignment = ToolStripItemAlignment.Right;
+            EndToolStripMenuItem.Name = "EndToolStripMenuItem";
+            EndToolStripMenuItem.Size = new Size(43, 20);
+            EndToolStripMenuItem.Text = "終了";
             // 
             // Form1
             // 
@@ -102,9 +104,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(532, 383);
             Controls.Add(label1);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(listBox1);
+            Controls.Add(SendListeningButton);
+            Controls.Add(StartListeningButton);
+            Controls.Add(notificationsListBox);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Name = "Form1";
@@ -117,12 +119,12 @@
 
         #endregion
 
-        private ListBox listBox1;
-        private Button button1;
-        private Button button2;
+        private ListBox notificationsListBox;
+        private Button StartListeningButton;
+        private Button SendListeningButton;
         private Label label1;
         private MenuStrip menuStrip1;
-        private ToolStripMenuItem 設定ToolStripMenuItem;
-        private ToolStripMenuItem 終了ToolStripMenuItem;
+        private ToolStripMenuItem SettingToolStripMenuItem;
+        private ToolStripMenuItem EndToolStripMenuItem;
     }
 }
